@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">TestApp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">        
+        <li ui-sref-active="active"><a ui-sref="Home">Home</a></li>
+        <li ui-sref-active="active"><a ui-sref="About">About</a></li>
+      </ul>
+
+      <div class="navbar-brand navbar-brand-center" ui-sref-active="{'show': 'About'}">
+        Navbar Counter: {{$ctrl.aboutPressCounter}} Side Effect: {{$ctrl.sideEffectValue}}
+      </div>
+
+      <form class="navbar-form navbar-right" ui-sref-active="{'show': 'Home'}">
+        <div class="form-group">
+          <input ng-model="$ctrl.filter.$" type="text" class="form-control" placeholder="Filter">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

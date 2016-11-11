@@ -1,0 +1,24 @@
+<navbar about-press-counter="$ctrl.pageAboutPressCounter"></navbar>
+<section>
+  <h2 ng-bind="::$ctrl.name"></h2>
+  <div class="row">
+    <div class="col-md-5">
+
+      <p>Test application by Ivan Shagrov</p>
+      <p>App features:</p>
+
+      <ul>
+        <li>There are no watchers or two-way bingings with watchers.</li>
+        <li>Navbar filter is implemented using two-way update through navbar model object, but not with binding and watcher (navbar.factory.js).</li>
+        <li>The employee edit form is also implemented using two-way through employee model object (employee-data.factory.js).</li>
+        <li>Navbar counter (about.controller.js) is implemented with optional navbar one-way binding.</li>
+        <li>Counter is also has side-effect using ES6 setter method (navbar.controller.js).</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <button ng-click="$ctrl.increaseAboutPressCounter()" class="btn btn-default">
+        Increase navbar counter
+      </button>
+    </div>
+  </div>
+</section>
